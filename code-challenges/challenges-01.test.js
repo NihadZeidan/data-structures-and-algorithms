@@ -80,12 +80,14 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
+  arr = []
   arr.push(value)
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  callback = addValues(times);
-  arr.push(num)
+  callback(arr, num)
+  arr.forEach( element => callback(times, element))
+  return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -107,9 +109,15 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
-};
+  availableItems = [
+    { name: 'apples', available: true },
+  { name: 'pears', available: true },
+  { name: 'oranges', available: false },
+  { name: 'bananas', available: true },
+  { name: 'blueberries', available: false }
+  ];
 
+}
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
 
