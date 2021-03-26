@@ -68,9 +68,11 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-    let validator = /\b[A-Z][a-z]*/g;
-    let findOut = str.match(validator);
-    return findOut;
+    let validator = /[A-Z][a-z]*/g;
+
+
+    let word = str.match(validator);
+    return word ? word : [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,8 +82,9 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
+    let validator = /^[A-J]/;
     let newArr = [];
-    let validator = /\b[A-J][a-z]*/g;
+
     arr.forEach(element => {
         if (validator.test(element)) {
             newArr.push(element)
