@@ -25,19 +25,12 @@ let starWarsPeople = [{
 
 const sortStarWarsCharacters = (starWarsArr) => {
 
-    starWarsArr.sort(compare);
-
-    function compare(a, b) {
-
-        if (a.height > b.height) {
-            return -1
-        }
-        if (b.height < a.height) {
-            return 1
-        }
-    }
+    starWarsArr.sort((a, b) => {
+        return b.height - a.height
+    })
 
     return starWarsArr
+
 };
 
 
@@ -77,29 +70,25 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-    let result = [str];
+        let result = [];
 
-    for (let i = 0; i < str.length; i++) {
-        result.push(str.slice(0, i))
-        result.reverse()
+        for (let i = 0; i <= str.length; i++) {
+            let splittedletter = str.slice(i)
+            result.push(splittedletter)
+        }
+        return result
+
     }
+    /* ------------------------------------------------------------------------------------------------
+    CHALLENGE 5
 
-    return result;
+    Write a function name wordsToCharList that, given a string as input, returns a new array where every element is a character of the input string.
 
-
-
-};
-
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 5
-
-Write a function name wordsToCharList that, given a string as input, returns a new array where every element is a character of the input string.
-
-For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
------------------------------------------------------------------------------------------------- */
+    For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
+    ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-    // Solution code here...
+    return arr.split("")
 };
 
 
@@ -146,7 +135,19 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
     let result = [];
-    // Solution code here...
+
+    result.push(recipe.ingredients[0].slice(15));
+    result.push(recipe.ingredients[1].slice(9));
+    result.push(recipe.ingredients[2].slice(9));
+    result.push(recipe.ingredients[3].slice(9));
+    result.push(recipe.ingredients[4].slice(10));
+    result.push(recipe.ingredients[5].slice(8));
+    result.push(recipe.ingredients[6].slice(8));
+    result.push(recipe.ingredients[7].slice(8));
+    result.push(recipe.ingredients[8].slice(8));
+    result.push(recipe.ingredients[9].slice(10));
+    result.push(recipe.ingredients[10].slice(10));
+
     return result;
 };
 
