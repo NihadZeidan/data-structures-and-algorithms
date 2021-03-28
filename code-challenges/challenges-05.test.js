@@ -136,19 +136,29 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
     let result = [];
 
-    result.push(recipe.ingredients[0].slice(15));
-    result.push(recipe.ingredients[1].slice(9));
-    result.push(recipe.ingredients[2].slice(9));
-    result.push(recipe.ingredients[3].slice(9));
-    result.push(recipe.ingredients[4].slice(10));
-    result.push(recipe.ingredients[5].slice(8));
-    result.push(recipe.ingredients[6].slice(8));
-    result.push(recipe.ingredients[7].slice(8));
-    result.push(recipe.ingredients[8].slice(8));
-    result.push(recipe.ingredients[9].slice(10));
-    result.push(recipe.ingredients[10].slice(10));
+    recipe.ingredients.forEach(item => {
+
+        let firstSlice = item.slice(item.indexOf(" ") + 1);
+
+        let secondSlice = firstSlice.slice(firstSlice.indexOf(" ") + 1);
+
+        result.push(secondSlice);
+    })
 
     return result;
+
+    // result.push(recipe.ingredients[0].slice(15));
+    // result.push(recipe.ingredients[1].slice(9));
+    // result.push(recipe.ingredients[2].slice(9));
+    // result.push(recipe.ingredients[3].slice(9));
+    // result.push(recipe.ingredients[4].slice(10));
+    // result.push(recipe.ingredients[5].slice(8));
+    // result.push(recipe.ingredients[6].slice(8));
+    // result.push(recipe.ingredients[7].slice(8));
+    // result.push(recipe.ingredients[8].slice(8));
+    // result.push(recipe.ingredients[9].slice(10));
+    // result.push(recipe.ingredients[10].slice(10));
+
 };
 
 /* ------------------------------------------------------------------------------------------------
