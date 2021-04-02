@@ -20,6 +20,11 @@ Becomes:
 
 function transformToLis(obj) {
 
+    let arr = [];
+    for (let prop in obj) {
+        arr.push(`<li>${prop}: ${obj[prop]}</li>`)
+    }
+    return arr
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,7 +142,7 @@ let starWarsData = [{
 const returnNames = (arr) => {
 
     let names = arr.reduce((eachName, val) => {
-        eachName += val.name
+        eachName.push(val.name)
         return eachName
     }, [])
 
