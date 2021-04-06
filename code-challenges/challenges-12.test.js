@@ -93,22 +93,16 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
 
-    let summing = stores.map((eachArr) => {
 
-        let eachHour = eachArr.map((val) => {
-            let arr = []
-            arr.push(val)
-            let sumEachHour = arr.reduce((acc, val) => {
-                return acc += val
-            }, 0)
-            return sumEachHour
-        })
-        return eachHour
 
+
+    let summing = stores.map(eachArr => {
+        //     let sum = 0;
+        //     sum += eachArr[0]
+
+        console.log(summing);
     })
-    return summing
-
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
