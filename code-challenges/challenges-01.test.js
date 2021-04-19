@@ -15,6 +15,7 @@ const addOne = (arr) => {
     return localArray
 }
 
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -22,12 +23,13 @@ Write a function named `addExclamation` that takes an array of strings, and retu
 
 Use `forEach` to loop over the input array. Modify each string, and add the updated value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
-
 const addExclamation = (arr) => {
     let secondLocalArray = [];
     arr.forEach(element => secondLocalArray.push(element + "!"));
     return secondLocalArray;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -78,7 +80,6 @@ Within the addNumbers function, invoke the callback function as many times as ne
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
-
 const addValues = (arr, value) => {
     arr.push(value)
 };
@@ -128,7 +129,6 @@ const createList = (availableItems) => {
     return inventory;
 }
 
-
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
 
@@ -162,7 +162,6 @@ const fizzbuzz = (arr) => {
     })
     return outPutArray
 };
-
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
