@@ -94,16 +94,19 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
     // Solution code here...
-    let sumArr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-    stores.reduce((acc, val) => {
-        let i = 0;
-        let total = val.reduce((sum, hour) => {
-            sumArr[i] += hour;
-            i++
-        }, 0)
-    }, 0)
-    return sumArr;
-};
+    let sum = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+    for (let i = 0; i < stores.length; i++) {
+
+        for (let j = 0; j < stores[i].length; j++) {
+
+            sum[j] += stores[i][j]
+
+        }
+    }
+
+    return sum
+}
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -120,8 +123,6 @@ const salesData = (hours, data) => {
     let arr = []
 
     hours.forEach((hour, i) => {
-
-
 
         arr.push({
             sales: data[i] + ' cookies',
