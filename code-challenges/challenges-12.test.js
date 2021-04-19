@@ -91,24 +91,23 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
+
 const grandTotal = (stores) => {
+    // Solution code here...
+    let sum = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-    let summing = stores.map((eachArr) => {
+    for (let i = 0; i < stores.length; i++) {
 
-        let eachHour = eachArr.map((val) => {
-            let arr = []
-            arr.push(val)
-            let sumEachHour = arr.reduce((acc, val) => {
-                return acc += val
-            }, 0)
-            return sumEachHour
-        })
-        return eachHour
+        for (let j = 0; j < stores[i].length; j++) {
 
-    })
-    return summing
+            sum[j] += stores[i][j]
 
-};
+        }
+    }
+
+    return sum
+}
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -121,8 +120,19 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-    // Solution code here...
-};
+    let arr = []
+
+    hours.forEach((hour, i) => {
+
+        arr.push({
+            sales: data[i] + ' cookies',
+            time: hour
+        })
+
+    });
+    return arr
+}
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
