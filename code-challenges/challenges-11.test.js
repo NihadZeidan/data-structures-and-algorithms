@@ -81,10 +81,11 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-    // let validator = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/g;
-    // let validatorForNonEmails = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/g;
-    // let validator = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/g;
-    let validator = /.{1,}@[^.]{1,}/g;
+    // let validator = /^\w+\.?\w+(.net | .com | .org)\b/g;
+    let validator = /^\w+\.?\w+@\w+(.net|.com|.co|.us|.uk|.org)\b/;
+
+    // // let validator = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/g;
+    // let validator = /^[A-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\.[A-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[A-Z0-9-]+(?:\.[A-Z0-9-]+)*$/;
 
     return validator.test(email);
 
@@ -114,7 +115,7 @@ Return either true or false.
 
 
 const validatePhoneNumber = (phoneNumber) => {
-    let validator = /[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s/0-9]$/g;
+    let validator = /^((\(\d{3}\))|\d{3})(\s|\-)?\d{3}(\s|\-)?\d{4}$/g;
 
     return validator.test(phoneNumber)
 
