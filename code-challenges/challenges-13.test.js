@@ -35,6 +35,9 @@ const longestString = (arr) => {
 
     return answer
 
+
+    return answer
+
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
