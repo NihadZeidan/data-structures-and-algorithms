@@ -8,18 +8,34 @@ Write a function named longestString that takes in an array of strings and retur
 
 const longestString = (arr) => {
 
-    let index = 0;
+    let longest = arr.reduce((acc, str) => {
+        acc.push(str.length)
 
-    for (let i = 0; i <= arr.length; i++) {
-        if (arr[i].length > 5) {
-            index = arr.indexOf(arr[i]);
-        }
+        return acc
+
+    }, []);
+
+    console.log(longest);
+
+    let flag = 0
+    let answer = 0;
+
+    if (longest.length > 0) {
+
+        longest.forEach((num) => {
+            if (num > flag) {
+                flag = num
+                answer = longest.indexOf(num)
+            }
+        })
+    } else {
+        answer = -1
     }
 
-    return index;
+
+    return answer
 
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -67,6 +83,13 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
+
+    let numbers = arr.map(str => {
+        let onlyNum = str.match(/\d/g);
+        return onlyNum.join('')
+    })
+    return numbers
+
 
 };
 
