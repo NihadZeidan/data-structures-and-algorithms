@@ -81,11 +81,13 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
+
     // let validator = /^\w+\.?\w+(.net | .com | .org)\b/g;
     let validator = /^\w+\.?\w+@\w+(.net|.com|.co|.us|.uk|.org)\b/;
 
     // // let validator = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/g;
     // let validator = /^[A-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\.[A-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[A-Z0-9-]+(?:\.[A-Z0-9-]+)*$/;
+
 
     return validator.test(email);
 
