@@ -10,6 +10,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 |Code Challenge | Link |
 |---------------|------|
 |Reverse an Array| [Reverse an Array](javascript/code-challenges/arrayReverse/array-reverse.js) |
+|Insert Shift Array| [Insert Shift Array](javascript/code-challenges/arrayShift/array-shift.js)   [Testing-Unit](code-challenges/array-shift-02.test.js)|
 
 ------------------------------------------------------------
 
