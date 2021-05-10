@@ -3,7 +3,7 @@
 LinkedList is a liner data structure that stores values into nodes and link nodes together through referencing to the next one.
 
 ## Challenge
-To create singly linked list form scratch with different methods and test those methods.
+To create singly linked list form scratch with different methods and test those methods. and to make semantic (custom) error.
 
 
 ## Approach & Efficiency
@@ -18,6 +18,9 @@ To create singly linked list form scratch with different methods and test those 
     - `toString()` : return a string of the linked list values in format of "{ a } -> { b } -> { c } -> NULL".
     
     - `findPosition()` : return the position of the value you are looking for (for example head at position 1).
+
+
+- I created custom Error by defining it as a class constructor that gives a customized message each time it will be thrown. 
 
 
 #### [Classes](javascript/code-challenges/linkedList/linked-list.js)

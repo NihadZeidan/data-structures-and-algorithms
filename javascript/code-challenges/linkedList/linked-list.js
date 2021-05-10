@@ -76,4 +76,14 @@ class LinkedList {
 
 }
 
+
+class Error {
+    constructor() {
+        this.location = LinkedList;
+        this.message = 'Something went wrong in the class methods !'
+    }
+}
+
+new Error
+
 module.exports = LinkedList;
