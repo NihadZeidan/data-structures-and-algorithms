@@ -16,8 +16,6 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 | Singly Linked List |  [Linked List Classes](javascript/code-challenges/linkedList/linked-list.js) /  [Testing Unit](code-challenges/linked-list.test.js)  /  [README](javascript/code-challenges/linkedList/README.md) | 
 
 
-
-
 ------------------------------------------------------------
 
 
