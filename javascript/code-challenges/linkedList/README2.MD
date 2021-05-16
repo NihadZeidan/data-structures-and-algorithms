@@ -4,6 +4,8 @@ To create singly linked list form scratch with different methods and test those 
 
 ## Whiteboard Process
 
+![II-insertions](../../../assets/II-insertion.png)
+
 
 ## Approach & Efficiency
 

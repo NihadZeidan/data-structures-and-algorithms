@@ -62,6 +62,7 @@ class LinkedList {
         return string += 'Null';
     }
 
+
     findPosition(value) {
         let current = this.head
         let counter = 0
