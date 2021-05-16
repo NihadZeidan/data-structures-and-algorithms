@@ -62,6 +62,7 @@ class LinkedList {
         return string += 'Null';
     }
 
+
     findPosition(value) {
         let current = this.head
         let counter = 0
@@ -73,6 +74,75 @@ class LinkedList {
             // current = current.next;
         }
     }
+
+
+    append(value) {
+        let node = new Node(value)
+
+
+        let current = this.head
+
+        while (current.next) {
+            current = current.next
+        }
+
+        current.next = node
+
+        return this;
+
+    }
+
+
+    insertAfter(value, newVal) {
+
+        let current = this.head
+
+        while (current.value) {
+
+            if (current.value === value) {
+                let node = new Node(newVal);
+
+                node.next = current.next;
+
+                current.next = node;
+                return;
+            }
+            current = current.next
+
+        }
+
+
+    }
+
+    insertBefore(value, newVal) {
+
+        let current = this.head
+
+        while (current.value) {
+            if (current.value === value) {
+                let node = new Node(value);
+
+                current.value = newVal
+
+                node.next = current.next;
+
+                current.next = node;
+                return;
+            }
+
+            if (current.next.value === value) {
+                let node = new Node(newVal);
+
+                node.next = current.next;
+
+                current.next = node;
+                return;
+            }
+            current = current.next
+
+        }
+    }
+
 
 }
 

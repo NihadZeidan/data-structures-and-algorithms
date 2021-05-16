@@ -50,4 +50,82 @@ describe('TESTING LINKEDLIST', () => {
         ll.insert('77');
         expect(ll.toString()).toEqual('{Nihad}->{Zeidan}->{77}->Null');
     });
+
+    it("Can successfully add a node to the end of the linked list", () => {
+        let ll = new LinkedList;
+        ll.insert(5);
+        ll.insert(4);
+        ll.insert(3);
+
+        ll.append("X");
+
+        console.log(ll);
+
+        expect(ll.head.next.next.next.value).toEqual("X");
+    });
+
+    it("Can successfully add multiple nodes to the end of a linked list", () => {
+        let ll = new LinkedList;
+        ll.insert(5);
+        ll.insert(4);
+        ll.insert(3);
+
+        ll.append("X");
+        ll.append("Y")
+
+        expect(ll.head.next.next.next.value).toEqual("X");
+        expect(ll.head.next.next.next.next.value).toEqual("Y");
+    });
+
+    it("Can successfully insert a node before a node located in the middle of a linked list", () => {
+        let ll = new LinkedList;
+        ll.insert(5);
+        ll.insert(4);
+        ll.insert(3);
+        ll.insert(2);
+        ll.insert(1);
+
+        ll.insertBefore(3, "BeforeMiddle");
+
+        expect(ll.head.next.next.value).toEqual("BeforeMiddle");
+        expect(ll.toString()).toEqual('{5}->{4}->{BeforeMiddle}->{3}->{2}->{1}->Null')
+    });
+
+    it('Can successfully insert a node before the first node of a linked list', () => {
+        let ll = new LinkedList;
+        ll.insert(5);
+        ll.insert(4);
+        ll.insert(3);
+
+        ll.insertBefore(5, "beforeTheFirst");
+
+        expect(ll.head.value).toEqual("beforeTheFirst");
+        expect(ll.toString()).toEqual('{beforeTheFirst}->{5}->{4}->{3}->Null');
+    });
+
+    it("Can successfully insert after a node in the middle of the linked list", () => {
+        let ll = new LinkedList;
+        ll.insert(5);
+        ll.insert(4);
+        ll.insert(3);
+        ll.insert(2);
+        ll.insert(1);
+
+        ll.insertAfter(3, "AfterMiddle");
+
+        expect(ll.head.next.next.next.value).toEqual("AfterMiddle");
+        expect(ll.toString()).toEqual('{5}->{4}->{3}->{AfterMiddle}->{2}->{1}->Null')
+    });
+
+    it('Can successfully insert a node after the last node of the linked list', () => {
+        let ll = new LinkedList;
+        ll.insert(5);
+        ll.insert(4);
+        ll.insert(3);
+
+        ll.insertAfter(3, "AfterTheLast");
+
+        expect(ll.head.next.next.next.value).toEqual('AfterTheLast');
+    });
+
 });
