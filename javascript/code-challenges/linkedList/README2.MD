@@ -1,9 +1,8 @@
-# Singly Linked List
-
-LinkedList is a liner data structure that stores values into nodes and link nodes together through referencing to the next one.
-
 ## Challenge
 To create singly linked list form scratch with different methods and test those methods. and to make semantic (custom) error.
+
+
+## Whiteboard Process
 
 
 ## Approach & Efficiency
@@ -35,6 +34,10 @@ To create singly linked list form scratch with different methods and test those 
 
 
 [Testing Unit](code-challenges/linked-list.test.js)
+
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
 
 
 ## API
