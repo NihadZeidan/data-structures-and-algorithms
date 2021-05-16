@@ -66,8 +66,8 @@ class LinkedList {
         let current = this.head
         let counter = 0
         while (current) {
+            counter++
             if (value === current.value) {
-                counter++
                 return counter;
             }
             // current = current.next;
