@@ -143,7 +143,34 @@ class LinkedList {
         }
     }
 
+    findFromEnd(k) {
+        let lastIndex = 0;
+        let current = this.head;
 
+        while (current.next) {
+            lastIndex++
+            current = current.next
+        }
+
+
+        let indexToTake = (lastIndex - k) + 1
+        let newIndex = 0;
+        let newCurrent = this.head;
+
+        while (newCurrent.next) {
+            newIndex++
+            if (newIndex == indexToTake) {
+                return newCurrent.value
+            } else {
+
+                newCurrent = newCurrent.next
+            }
+        }
+
+        if (newIndex <= indexToTake) {
+            return newCurrent.value
+        }
+    }
 }
 
 
