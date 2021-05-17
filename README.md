@@ -14,7 +14,8 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 |Binary Search Algorithm| [Binary Search Algorithm](javascript/code-challenges/arrayBinarySearch/array-binary-search.js)  /  [Testing-Unit](code-challenges/arr-binary-search.test.js)  /  [README](javascript/code-challenges/arrayBinarySearch/README.md) |
 | Fibonacci Sequence | [WhiteBoard](assets/fibonaccie.png) [Testing Unit](code-challenges/fibonacci.test.js) [Fibonatcci Function](javascript/code-challenges/Fibonacci-Squance/fib-seq.js) | 
 | Singly Linked List |  [Linked List Classes](javascript/code-challenges/linkedList/linked-list.js) /  [Testing Unit](code-challenges/linked-list.test.js)  /  [README](javascript/code-challenges/linkedList/README.md) | 
-| Singly Linked List II | [Linked List Classes](javascript/code-challenges/linkedList/linked-list.js)  /   [Testing Unit](code-challenges/linked-list.test.js)  /   [README](javascript/code-challenges/linkedList/README2.md) | 
+| Singly Linked List insertion II | [Linked List Classes](javascript/code-challenges/linkedList/linked-list.js)  /   [Testing Unit](code-challenges/linked-list.test.js)  /   [README](javascript/code-challenges/linkedList/README2.md) |
+| Singly Linked List kth-from-end | [Linked List Classes](javascript/code-challenges/linkedList/linked-list.js)  /   [Testing Unit](code-challenges/linked-list.test.js)  /   [README](javascript/code-challenges/linkedList/README3.md) |
 
 
 ------------------------------------------------------------

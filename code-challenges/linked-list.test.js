@@ -128,4 +128,79 @@ describe('TESTING LINKEDLIST', () => {
         expect(ll.head.next.next.next.value).toEqual('AfterTheLast');
     });
 
+
+    it('Where k is greater than the length of the linked list', () => {
+        let ll = new LinkedList;
+        ll.insert(5);
+        ll.insert(4);
+        ll.insert(3);
+
+        let test = ll.findFromEnd(4);
+        expect(test).not.toBeDefined();
+    });
+
+    it('Where k and the length of the list are the same', () => {
+        let ll = new LinkedList;
+        ll.insert(5);
+        ll.insert(4);
+        ll.insert(3);
+
+        let test = ll.findFromEnd(3);
+        expect(test).not.toBeDefined();
+    });
+
+    it('Where k is not a positive integer', () => {
+        let ll = new LinkedList;
+        ll.insert(5);
+        ll.insert(4);
+        ll.insert(3);
+
+        let test = ll.findFromEnd(-1);
+        expect(test).toEqual(3);
+    });
+
+
+    it('Where the linked list is of a size 1', () => {
+        let ll = new LinkedList;
+        ll.insert(5);
+
+
+        let test = ll.findFromEnd(0);
+        expect(test).toEqual(5);
+    });
+
+    it('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+        let ll = new LinkedList;
+        ll.insert(5);
+        ll.insert(4);
+        ll.insert(3);
+        ll.insert(2);
+        ll.insert(1);
+
+        let test = ll.findFromEnd(2);
+        let test2 = ll.findFromEnd(3)
+        let test3 = ll.findFromEnd(1)
+
+        expect(test).toEqual(3);
+        expect(test2).toEqual(4);
+        expect(test3).toEqual(2);
+    });
+
+    it('Edge Cases for findFromEnd method', () => {
+        let ll = new LinkedList;
+        ll.insert(5);
+        ll.insert(4);
+        ll.insert(3);
+        ll.insert(2);
+        ll.insert(1);
+
+        let test = ll.findFromEnd("x");
+        let test2 = ll.findFromEnd([5, 9]);
+        let test3 = ll.findFromEnd({ user: "user" });
+
+
+        expect(test).not.toBeDefined();
+        expect(test2).not.toBeDefined();
+        expect(test3).not.toBeDefined();
+    });
 });
