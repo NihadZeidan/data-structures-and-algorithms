@@ -43,7 +43,7 @@ class Stack {
         if (this.top) {
             return this.top.value
         } else {
-            return Error("Can't Peek on Empty Stack !")
+            return Error("Can't Peek on Empty Stack!")
         }
     }
 
@@ -58,26 +58,33 @@ class Stack {
 
 // --------------------------
 
+let rear = null;
+
 
 class Queue {
     constructor() {
         this.front = null
     }
 
+
     enqueue(value) {
         let node = new Node(value);
-        let pointer = null;
-        // node.next = rear
+
 
         if (this.front) {
 
-            this.front.next = node
+            if (!rear) {
+                rear = node
+                this.front.next = rear
+            } else {
+                rear.next = node
+                rear = node
 
-
+            }
         } else {
             this.front = node
+            rear = this.front.next
         }
-
     }
 
     dequeue() {
@@ -87,10 +94,17 @@ class Queue {
 
             return temp.value
         } else {
-            return Error("Can't dequeue on Empty Queue");
+            return Error("Can't Dequeue on Empty Queue!");
         }
     }
 
+    peek() {
+        if (this.front) {
+            return this.front.value
+        } else {
+            return Error("Can't Peek on Empty Queue!")
+        }
+    }
 
     isEmpty() {
         if (this.front) {
@@ -99,4 +113,9 @@ class Queue {
             return true;
         }
     }
+}
+
+module.exports = {
+    Stack,
+    Queue
 }
