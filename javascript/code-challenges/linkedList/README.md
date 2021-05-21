@@ -31,10 +31,10 @@ To create singly linked list form scratch with different methods and test those 
 
 ### Links:
 
-[Classes](javascript/code-challenges/linkedList/linked-list.js)
+[Classes](../../../javascript/code-challenges/linkedList/linked-list.js)
 
 
-[Testing Unit](code-challenges/linked-list.test.js)
+[Testing Unit](../../../code-challenges/linked-list.test.js)
 
 
 ## API
