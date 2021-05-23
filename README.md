@@ -18,6 +18,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 | Singly Linked List kth-from-end | [Linked List Classes](javascript/code-challenges/linkedList/linked-list.js)  /   [Testing Unit](code-challenges/linked-list.test.js)  /   [README](javascript/code-challenges/linkedList/README3.md) |
 | ZIP LinkedLists | [Function](javascript/code-challenges/llZip/ll-zip.js)  /   [Testing Unit](code-challenges/linked-list.test.js)  /   [README](javascript/code-challenges/llZip/README.md) |
 | STACKS AND QUEUES | [STACK AND QUEUES Classes](javascript/code-challenges/stacksAndQueues/stacks-and-queues.js)  /  [Testing Unit](code-challenges/stackAndQueue.test.js)  /  [README](javascript/code-challenges/stacksAndQueues/Readme.md)
+| Queue with two Stacks | [QUEUE Class](javascript/code-challenges/queueWithStacks/queue-with-stacks.js)  /  [Testing Unit](code-challenges/pseudoQueue.test.js)  /  [README](javascript/code-challenges/queueWithStacks/Readme.md) |
 
 
 ------------------------------------------------------------
