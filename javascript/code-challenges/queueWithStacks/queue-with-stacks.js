@@ -62,18 +62,21 @@ class PseudoQueue {
     }
 
     dequeue() {
+
+
         if (this.outerStack.isEmpty()) {
             while (!this.innerStack.isEmpty()) {
                 this.outerStack.push(this.innerStack.pop());
             }
-
         }
-        return this.outerStack.pop()
 
-        // else {
-        //     while (this.outerStack.top) {
-        //         this.innerStack.push(this.outerStack.pop());
-        //     }
+        let val = this.outerStack.pop()
+
+        while (!this.outerStack.isEmpty()) {
+            this.innerStack.push(this.outerStack.pop());
+        }
+
+        return val;
 
     }
 
