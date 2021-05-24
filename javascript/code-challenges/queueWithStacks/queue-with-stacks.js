@@ -67,8 +67,8 @@ class PseudoQueue {
                 this.outerStack.push(this.innerStack.pop());
             }
 
-            return this.outerStack.pop()
         }
+        return this.outerStack.pop()
 
         // else {
         //     while (this.outerStack.top) {
