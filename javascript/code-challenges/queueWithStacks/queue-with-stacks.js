@@ -66,6 +66,7 @@ class PseudoQueue {
             while (!this.innerStack.isEmpty()) {
                 this.outerStack.push(this.innerStack.pop());
             }
+
             return this.outerStack.pop()
         } else {
             while (this.outerStack.top) {
@@ -75,5 +76,6 @@ class PseudoQueue {
         }
 
     }
+}
 
-    module.exports = PseudoQueue
+module.exports = PseudoQueue
