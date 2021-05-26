@@ -62,8 +62,6 @@ class PseudoQueue {
     }
 
     dequeue() {
-
-
         if (this.outerStack.isEmpty()) {
             while (!this.innerStack.isEmpty()) {
                 this.outerStack.push(this.innerStack.pop());
