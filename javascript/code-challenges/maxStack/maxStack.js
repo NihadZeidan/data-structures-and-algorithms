@@ -1,71 +1,30 @@
 'use strict'
 
-class Node {
-    constructor(value) {
-        this.value = value;
-        this.next = null;
-    }
-}
-
+const Stack = require('../stacksAndQueues/stacks-and-queues.js').Stack
 
 class MaxStack {
     constructor() {
-        this.top = null
+        this.sta = new Stack()
+        this.maxSt = new Stack()
     }
 
     push(value) {
-        let node = new Node(value);
-
-        if (this.top) {
-            node.next = this.top
-            this.top = node
-        } else {
-
-            this.top = node
+        let max = value
+        if (!this.maxSt.isEmpty() && max < this.maxSt.peek()) {
+            max = this.maxSt.peek()
         }
+        this.maxSt.push(max)
+        this.sta.push(value)
     }
 
     pop() {
-
-        if (this.top) {
-            let temp = new Node(this.top.value);
-
-            this.top = this.top.next
-            return temp.value
-
-        } else {
-            return Error("Can't Pop on Empty Stack!");
-        }
-
-
-
-    }
-
-
-    peek() {
-        if (this.top) {
-            return this.top.value
-        } else {
-            return Error("Can't Peek on Empty Stack!")
-        }
-    }
-
-    isEmpty() {
-        if (this.top) {
-            return false;
-        } else {
-            return true;
-        }
+        this.maxSt.pop()
+        return this.sta.pop()
     }
 
     getMax() {
-        let toCompar = this.peek()
-        this.pop()
-        if (toCompar > this.peek()) {
-            return toCompar
-        } else {
-            this.pop()
-        }
-
+        return this.maxSt.peek()
     }
 }
+
+module.exports = MaxStack
