@@ -6,7 +6,6 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 
 ## 401 Table of contents:
 
-
 |Code Challenge | Link |
 |---------------|------|
 |Reverse an Array| [Reverse an Array](javascript/code-challenges/arrayReverse/array-reverse.js)  / [README](javascript/code-challenges/arrayReverse/README.md)|
@@ -20,6 +19,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 | STACKS AND QUEUES | [STACK AND QUEUES Classes](javascript/code-challenges/stacksAndQueues/stacks-and-queues.js)  /  [Testing Unit](code-challenges/stackAndQueue.test.js)  /  [README](javascript/code-challenges/stacksAndQueues/Readme.md)
 | Queue with two Stacks | [QUEUE Class](javascript/code-challenges/queueWithStacks/queue-with-stacks.js)  /  [Testing Unit](code-challenges/pseudoQueue.test.js)  /  [README](javascript/code-challenges/queueWithStacks/Readme.md) |
 | Animal Shelter | [Queue Class](./javascript/code-challenges/fifoAnimalShelter/fifo-animal-shelter.js)  /  [Testing Unit](/code-challenges/fifo-animal-shelter.test.js)  /  [README](javascript/code-challenges/fifoAnimalShelter/Readme.md) |
+| Bracket function | [function](./javascript/code-challenges/multiBracketValidation/multi-bracket-validation.js)  /  [Testing Unit](/code-challenges/multi-bracket-validation.test.js)  /  [README](javascript/code-challenges/multiBracketValidation/Readme.md) |
 
 ------------------------------------------------------------
 
