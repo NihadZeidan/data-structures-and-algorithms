@@ -61,6 +61,37 @@ class BinaryTree {
         return finalResult;
 
     }
+
+    findMaximumValue() {
+        let max = 0
+
+        function maximum(root) {
+            if (root == null) {
+                return 'Tree is Empty'
+            }
+
+            if (root.value > max) {
+                max = root.value
+            }
+
+            if (root.left) {
+                maximum(root.left)
+
+            }
+
+            if (root.right) {
+                maximum(root.right)
+            }
+
+            return max
+
+        }
+
+        return maximum(this.root);
+    }
+
+
+
 }
 
 
