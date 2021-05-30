@@ -22,6 +22,8 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 | Bracket function | [function](./javascript/code-challenges/multiBracketValidation/multi-bracket-validation.js)  /  [Testing Unit](/code-challenges/multi-bracket-validation.test.js)  /  [README](javascript/code-challenges/multiBracketValidation/Readme.md) |
 | Max Stack | [Class](javascript/code-challenges/maxStack/maxStack.js)  /  [WhiteBoard](/assets/maxStack.png)  /  |
 | Tree | [Class](javascript/code-challenges/tree/tree.js)   /   [README](/javascript/code-challenges/tree/readme.md)   /  [Testing Unit](code-challenges/trees.test.js)  /  |
+| Tree With `findMaximumValue()` | [Class](javascript/code-challenges/tree/tree.js)   /   [README](/javascript/code-challenges/tree/readme2.md)   /  [Testing Unit](code-challenges/trees.test.js)  /  |
+
 
 ------------------------------------------------------------
 

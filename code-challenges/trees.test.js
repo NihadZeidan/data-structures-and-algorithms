@@ -174,4 +174,43 @@ describe('TESTING BINARY TREE', () => {
         expect(notAcceptedValue3).toEqual('Only Numbers Can Added to this BinarySearchTree');
 
     });
+
+    it('Check findMaximumValue Method for Binary Tree', () => {
+
+        let root = new Node(50);
+        let left = root.left = new Node(90);
+        let right = root.right = new Node(70);
+
+        let test = new BinaryTree(root);
+
+        expect(test.findMaximumValue()).toEqual(90);
+
+    });
+
+    it('Check findMaximumValue Method for Binary Tree with more left and right sides', () => {
+
+        let root = new Node(2);
+        let left = root.left = new Node(5);
+        let right = root.right = new Node(23);
+
+        left.left = new Node(7);
+        left.right = new Node(60);
+
+        right.left = new Node(6);
+        right.right = new Node(1);
+
+        let newtest = new BinaryTree(root);
+
+        expect(newtest.findMaximumValue()).toEqual(60);
+
+    });
+
+
+    it('Check findMaximumValue Method for empty Binary Tree', () => {
+        let test = new BinaryTree();
+        expect(test.findMaximumValue()).toEqual('Tree is Empty');
+
+    });
+
+
 })
