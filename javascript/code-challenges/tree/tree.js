@@ -63,13 +63,14 @@ class BinaryTree {
     }
 
     findMaximumValue() {
+        if (this.root == null) {
+            return 'Tree is Empty'
+        }
 
-        let max = root.value;
+        let max = this.root.value;
+
 
         function maximum(root) {
-            if (root == null) {
-                return 'Tree is Empty'
-            }
 
             if (root.value > max) {
                 max = root.value
