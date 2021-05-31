@@ -23,6 +23,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 | Max Stack | [Class](javascript/code-challenges/maxStack/maxStack.js)  /  [WhiteBoard](/assets/maxStack.png)  /  |
 | Tree | [Class](javascript/code-challenges/tree/tree.js)   /   [README](/javascript/code-challenges/tree/readme.md)   /  [Testing Unit](code-challenges/trees.test.js)  /  |
 | Tree With `findMaximumValue()` | [Class](javascript/code-challenges/tree/tree.js)   /   [README](/javascript/code-challenges/tree/readme2.md)   /  [Testing Unit](code-challenges/trees.test.js)  /  |
+| Tree With `breadthFirst()` | [Class](javascript/code-challenges/tree/tree.js)   /   [README](/javascript/code-challenges/tree/readme3.md)   /  [Testing Unit](code-challenges/trees.test.js)  /  |
 
 
 ------------------------------------------------------------
