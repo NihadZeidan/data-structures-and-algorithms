@@ -24,6 +24,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 | Tree | [Class](javascript/code-challenges/tree/tree.js)   /   [README](/javascript/code-challenges/tree/readme.md)   /  [Testing Unit](code-challenges/trees.test.js)  /  |
 | Tree With `findMaximumValue()` | [Class](javascript/code-challenges/tree/tree.js)   /   [README](/javascript/code-challenges/tree/readme2.md)   /  [Testing Unit](code-challenges/trees.test.js)  /  |
 | Tree With `breadthFirst()` | [Class](javascript/code-challenges/tree/tree.js)   /   [README](/javascript/code-challenges/tree/readme3.md)   /  [Testing Unit](code-challenges/trees.test.js)  /  |
+| `fizzBuzzTree()` | [Function](javascript/code-challenges/fizzBuzzTree/fizz-buzz-tree.js)   /   [README](/javascript/code-challenges/fizzBuzzTree/readme.md)   /  [Testing Unit](code-challenges/fizz-buzz.test.js)  /  |
 
 
 ------------------------------------------------------------
