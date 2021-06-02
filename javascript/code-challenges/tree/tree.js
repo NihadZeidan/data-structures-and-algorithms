@@ -196,3 +196,49 @@ module.exports = {
     BinarySearchTree,
     Node
 }
+
+
+function zigZagTree(tree) {
+    if (!tree.root) {
+        return 'Wake up !!, The Tree is Empty'
+    }
+
+    let FirstST = new Stack();
+    let SecondST = new Stack();
+
+    FirstST.push(tree.root)
+    let pointer = true;
+
+    let result = []
+
+    while (!FirstST.isEmpty()) {
+        let current = FirstST.pop();
+        result.push(current.value);
+        if (pointer) {
+            if (current.left != null) {
+                SecondST.push(current.left);
+            }
+            if (current.right != null) {
+                SecondST.push(current.right);
+            }
+
+        } else {
+            if (current.right != null) {
+                SecondST.push(current.right);
+            }
+
+            if (current.left != null) {
+                SecondST.push(current.left);
+            }
+        }
+
+        if (FirstST.isEmpty()) {
+            pointer = !pointer;
+            let emptyStack = FirstST;
+            FirstST = SecondST;
+            SecondST = emptyStack;
+        }
+
+    }
+    return result;
+}
