@@ -242,3 +242,52 @@ function zigZagTree(tree) {
     }
     return result;
 }
+
+
+function checkIfFilesAreEqual(Ftree, Stree) {
+    function checkFirst(Ftree) {
+        let Q = new Queue();
+        let files = 0
+        Q.enqueue(Ftree.root)
+        while (!Q.isEmpty()) {
+            let current = Q.dequeue()
+
+            if (current.value === 'file') {
+                files++
+            }
+
+            if (current.left) { Q.enqueue(current.left) }
+            if (current.right) { Q.enqueue(current.right) }
+        }
+        return files;
+    }
+    checkFirst(Ftree)
+
+
+    function checkSecond(Stree) {
+        let Q = new Queue();
+        let files = 0
+        Q.enqueue(Stree.root)
+
+        while (!Q.isEmpty()) {
+            let current = Q.dequeue()
+
+            if (current.value === 'file') {
+                files++
+            }
+
+            if (current.left) { Q.enqueue(current.left) }
+            if (current.right) { Q.enqueue(current.right) }
+        }
+
+        return files;
+    }
+    checkSecond(Stree)
+
+    if (checkFirst(Ftree) === checkSecond(Stree)) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
