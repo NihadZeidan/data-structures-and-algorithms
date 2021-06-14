@@ -26,6 +26,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 | Tree With `breadthFirst()` | [Class](javascript/code-challenges/tree/tree.js)   /   [README](/javascript/code-challenges/tree/readme3.md)   /  [Testing Unit](code-challenges/trees.test.js)  /  |
 | `fizzBuzzTree()` | [Function](javascript/code-challenges/fizzBuzzTree/fizz-buzz-tree.js)   /   [README](/javascript/code-challenges/fizzBuzzTree/readme.md)   /  [Testing Unit](code-challenges/fizz-buzz.test.js)  /  |
 | `Insertion Sort` | [Function](javascript/code-challenges/insertionSort/insertionSort.js)   /   [README](/javascript/code-challenges/insertionSort/readme.md)   /  [Testing Unit](code-challenges/insertionSort.test.js)  /  |
+| `Merge Sort` | [Function](javascript/code-challenges/mergeSort/mergeSort.js)   /   [BLOG](./javascript/code-challenges/mergeSort/BOLG.md)   /  [Testing Unit](code-challenges/mergeSort.test.js)  /  |
 
 
 ------------------------------------------------------------
