@@ -1,93 +1,90 @@
 "use strict";
 function mergeSort(input) {
-
-
-    if (!input) {
-        return "Input Must Be Array of Integers";
-      } else if (typeof input === typeof 7) {
-        return "Input Must Be Array of Integers";
-      } else if (typeof input === typeof "string") {
-        return "Input Must Be Array of Integers";
-      }
-
-
-    let n = input.length
-    if (n < 2) return input;
-    
-    const mid = Math.ceil(n/2);
-
-    const left = input.slice(0,mid)
-    const right = input.slice(mid, n)
-
-    const sortedLeftArray = mergeSort(left);
-    const sortedRightArray = mergeSort(right);
-
-    return merge(sortedLeftArray, sortedRightArray);
+  if (!input) {
+    return "Input Must Be Array of Integers";
+  } else if (typeof input === typeof 7) {
+    return "Input Must Be Array of Integers";
+  } else if (typeof input === typeof "string") {
+    return "Input Must Be Array of Integers";
   }
-  
-  function merge (left, right){
-    let finalArr = [];
-    while(left.length && right.length){
 
-      if(left[0]<= right[0]){
-        finalArr.push(left.shift())
-      }else{
-        finalArr.push(right.shift())
-      }
+  let n = input.length;
+  if (n < 2) return input;
+
+  const mid = Math.ceil(n / 2);
+
+  const left = input.slice(0, mid);
+  const right = input.slice(mid, n);
+
+  const sortedLeftArray = mergeSort(left);
+  const sortedRightArray = mergeSort(right);
+
+  return merge(sortedLeftArray, sortedRightArray);
+}
+
+function merge(left, right) {
+  let finalArr = [];
+  while (left.length && right.length) {
+    if (left[0] <= right[0]) {
+      finalArr.push(left.shift());
+    } else {
+      finalArr.push(right.shift());
     }
-   
-    return [...finalArr, ...left, ...right];
   }
-  
-  module.exports = mergeSort
 
+  return [...finalArr, ...left, ...right];
+}
 
-
-
-
-
-
-
-
-
+module.exports = mergeSort;
 
 // ------------------------------------------------------------
-  // function MergeSort(arr) {
-//   let n = arr.length;
 
-//   if (n > 1) {
-//     let mid = n / 2;
-//     let left = arr[0 - mid];
-//     let right = arr[mid - n];
+// Another Solution
 
-//     MergeSort(left);
-//     MergeSort(right);
+function MergeSort(arr) {
+  let n = arr.length;
 
-//     Merge(left, right, arr);
-//   }
-// }
+  if (n > 1) {
+    let mid = Math.ceil(n / 2);
+    let left = arr.slice(0, mid);
 
-// function Merge(left, right, arr) {
-//   let i = 0;
-//   let j = 0;
-//   let k = 0;
+    let right = arr.slice(mid, n);
+    MergeSort(left);
+    MergeSort(right);
 
-//   while (i < left.length && j < right.length) {
-//     if (left[i] <= right[j]) {
-//       arr[k] = left[i];
-//       i++;
-//     } else {
-//       arr[k] = right[j];
-//       j++;
-//     }
-//     k++;
-//   }
+    return Merge(left, right, arr);
+  }
+}
 
+function Merge(left, right, arr) {
+  let i = 0;
+  let j = 0;
+  let k = 0;
 
-//   if (i= left.length){
-//     arr.set(right)
+  while (i < left.length && j < right.length) {
+    if (left[i] <= right[j]) {
+      arr[k] = left[i];
+      i++;
+    } else {
+      arr[k] = right[j];
+      j++;
+    }
+    k++;
+  }
 
-//   }else{
-//     arr.set(left)
-//   }
-// }
+  if (i === left.length) {
+    while (j < right.length) {
+      arr[k] = right[j];
+      j++;
+      k++;
+    }
+  } else {
+    while (i < left.length) {
+      arr[k] = left[i];
+      i++;
+      k++;
+    }
+  }
+  return arr;
+}
+
