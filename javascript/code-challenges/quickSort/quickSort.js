@@ -1,8 +1,6 @@
 "use strict";
 
 function quickSort(items, left, right) {
-
-
   let index;
   if (items.length > 1) {
     index = partition(items, left, right); //index returned from partition
@@ -45,3 +43,25 @@ function swap(items, leftIndex, rightIndex) {
 }
 
 module.exports = quickSort;
+
+// ---------------------------------------------------------
+
+// Another Solution
+
+function QuickS(arr) {
+  if (arr.length < 2) return arr;
+
+  let pivot = arr[0];
+  let lowArr = [];
+  let highArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > pivot) {
+      highArr.push(arr[i]);
+    } else {
+      lowArr.push(arr[i]);
+    }
+  }
+  
+  return QuickS(lowArr).concat(pivot, QuickS(highArr));
+}
