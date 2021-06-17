@@ -28,6 +28,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 | `Insertion Sort` | [Function](javascript/code-challenges/insertionSort/insertionSort.js)   /   [README](/javascript/code-challenges/insertionSort/readme.md)   /  [Testing Unit](code-challenges/insertionSort.test.js)  /  |
 | `Merge Sort` | [Function](javascript/code-challenges/mergeSort/mergeSort.js)   /   [BLOG](./javascript/code-challenges/mergeSort/BOLG.md)   /  [Testing Unit](code-challenges/mergeSort.test.js)  /  |
 | `QuickSort` | [Function](javascript/code-challenges/quickSort/quickSort.js)   /   [BLOG](./javascript/code-challenges/quickSort/BLOG.md)   /  [Testing Unit](code-challenges/quickSort.test.js)  /  |
+| `HashTables` | [Function](javascript/code-challenges/hashtables/hashtable.js)   /   [README](./javascript/code-challenges/hashtables/Readme.md)   /  [Testing Unit](code-challenges/hashtable.test.js)  /  |
 
 
 
