@@ -63,7 +63,7 @@ class HashTable {
     }
     this.table[hashedKey].append({ [key]: value });
 
-    return this.table[hashedKey]
+    return this.table[hashedKey];
   }
 
   get(key) {
@@ -76,7 +76,6 @@ class HashTable {
     }
   }
 
-
   contains(key) {
     let lookItUp = this.get(key);
 
@@ -88,4 +87,27 @@ class HashTable {
   }
 }
 
-module.exports = HashTable
+module.exports = HashTable;
+
+function checkIfUniqueChar(string) {
+  if (/[^A-Za-z \'\"\)\(\{\}\[\]\)\:\;\']/g.test(string)) {
+    return "only strings accepted";
+  }
+  let myHashMap = new HashTable(32);
+  let validator = /[A-Za-z]/g;
+  let filteredString = string.match(validator);
+
+  for (let char of filteredString) {
+    myHashMap.add(char.toLowerCase(), char);
+
+    let value = myHashMap.get(char.toLowerCase());
+
+    if (value.root.next) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+console.log(checkIfUniqueChar("asdewq"));
