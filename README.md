@@ -31,7 +31,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 | `HashTables`                    | [Function](javascript/code-challenges/hashtables/hashtable.js) / [README](./javascript/code-challenges/hashtables/Readme.md) / [Testing Unit](code-challenges/hashtable.test.js) /                                                      |
 | RepeatedWord Function           | [Function](javascript/code-challenges/repeatedWord/repeated-word.js) / [README](./javascript/code-challenges/repeatedWord/Readme.md) / [Testing Unit](code-challenges/repeatedWord.test.js) /                                           |
 | tree-intersection Function      | [Function](javascript/code-challenges/treeIntersection/tree-intersection.js) / [README](javascript/code-challenges/treeIntersection/readme.md) / [Testing Unit](code-challenges/tree-intersection.test.js) /                            |
-
-| Left-Join Function      | [Function](javascript/code-challenges/leftJoin/left-join.js) / [README](javascript/code-challenges/leftJoin/readme.md) / [Testing Unit](code-challenges/leftJoin.test.js) /                            |
+| Left-Join Function | [Function](javascript/code-challenges/leftJoin/left-join.js) / [README](javascript/code-challenges/leftJoin/readme.md) / [Testing Unit](code-challenges/leftJoin.test.js) / |
+| Graph | [Class](javascript/code-challenges/Graph/graph.js) / [README](javascript/code-challenges/Graph/Readme.md) / [Testing Unit](code-challenges/graph.test.js) |
 
 ---
