@@ -23,3 +23,11 @@ To implement Graph from scratch with basic methods
 `getNeighbors` ---> Returns a collection of edges connected to the given node, Include the weight of the connection in the returned collection.
 
 `size` ---> Returns the total number of nodes in the graph.
+
+`breadthFirst(vertex)` ---> Returns values traversed in Breadth First approach.
+
+## WhiteBoard For BFS
+
+![](../../../assets/graphBFS.jpg)
+
+
