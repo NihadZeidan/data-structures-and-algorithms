@@ -1,5 +1,7 @@
 "use strict";
 
+let Queue = require("../stacksAndQueues/stacks-and-queues.js").Queue;
+
 class Vertex {
   constructor(value) {
     this.value = value;
@@ -51,8 +53,31 @@ class Graph {
   size() {
     return this.adjacencyList.size;
   }
+
+  breadthFirst(vertex) {
+    let list = new Array();
+    let queue = new Queue();
+    let visited = new Set();
+
+    queue.enqueue(vertex);
+    visited.add(vertex);
+
+    while (!queue.isEmpty()) {
+      let front = queue.dequeue();
+      list.push(front.value);
+
+      let value = this.getNeighbors(front);
+
+      for (let neighbor of value) {
+        if (!visited.has(neighbor.vertex)) {
+          visited.add(neighbor.vertex);
+          queue.enqueue(neighbor.vertex);
+        }
+      }
+    }
+    return list;
+  }
 }
 
-module.exports = { Graph, Vertex };
 
-// console.log(myGraph);
+module.exports = { Graph, Vertex };
