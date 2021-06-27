@@ -79,5 +79,5 @@ class Graph {
   }
 }
 
-F
+
 module.exports = { Graph, Vertex };
