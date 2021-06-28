@@ -33,5 +33,6 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-co
 | tree-intersection Function      | [Function](javascript/code-challenges/treeIntersection/tree-intersection.js) / [README](javascript/code-challenges/treeIntersection/readme.md) / [Testing Unit](code-challenges/tree-intersection.test.js) /                            |
 | Left-Join Function | [Function](javascript/code-challenges/leftJoin/left-join.js) / [README](javascript/code-challenges/leftJoin/readme.md) / [Testing Unit](code-challenges/leftJoin.test.js) / |
 | Graph | [Class](javascript/code-challenges/Graph/graph.js) / [README](javascript/code-challenges/Graph/Readme.md) / [Testing Unit](code-challenges/graph.test.js) |
+| BusinessTrip with Graph | [Class](javascript/code-challenges/graghBusinessTrip/graphBusinessTrip.js) / [README](javascript/code-challenges/graghBusinessTrip/README.md) / [Testing Unit](code-challenges/graphBusinessTrip.test.js) |
 
 ---
