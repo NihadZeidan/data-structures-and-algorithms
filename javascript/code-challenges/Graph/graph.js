@@ -77,9 +77,26 @@ class Graph {
     }
     return list;
   }
+
+  depthFirst(vertex, visited = new Set()) {
+    visited.add(vertex);
+
+    const destinations = this.adjacencyList.get(vertex);
+
+    for (const destination of destinations) {
+      if (!visited.has(destination.vertex)) {
+        this.depthFirst(destination.vertex, visited);
+      }
+    }
+
+    let result = [...visited];
+    let final = [];
+    for (let vert of result) {
+      final.push(vert.value);
+    }
+
+    return final;
+  }
 }
-
-
-
 
 module.exports = { Graph, Vertex };
