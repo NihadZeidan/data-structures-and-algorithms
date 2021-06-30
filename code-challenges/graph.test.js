@@ -128,7 +128,6 @@ describe("Testing Graph", () => {
     myGraph.addDirectedEdge(two, three);
     myGraph.addDirectedEdge(three, four);
 
-
     expect(myGraph.breadthFirst(zero)).toEqual([0, 2, 3, 4]);
   });
 
@@ -148,7 +147,6 @@ describe("Testing Graph", () => {
     myGraph.addDirectedEdge(two, three);
     myGraph.addDirectedEdge(three, four);
 
-
     expect(myGraph.breadthFirst(two)).toEqual([2, 3, 4]);
   });
   it("Testing Breadth first method", () => {
@@ -167,7 +165,24 @@ describe("Testing Graph", () => {
     myGraph.addDirectedEdge(two, three);
     myGraph.addDirectedEdge(three, four);
 
-
     expect(myGraph.breadthFirst(three)).toEqual([3, 4]);
+  });
+
+  it("Test Depth First Method", () => {
+    const myGraph = new Graph();
+    const zero = new Vertex(0);
+    const two = new Vertex(2);
+    const three = new Vertex(3);
+    const four = new Vertex(4);
+
+    myGraph.add(zero);
+    myGraph.add(two);
+    myGraph.add(three);
+    myGraph.add(four);
+
+    myGraph.addDirectedEdge(zero, two);
+    myGraph.addDirectedEdge(two, three);
+    myGraph.addDirectedEdge(zero, four);
+    expect(myGraph.depthFirst(zero)).toEqual([0, 2, 3, 4]);
   });
 });
