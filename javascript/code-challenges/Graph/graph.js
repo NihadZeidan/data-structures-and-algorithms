@@ -99,43 +99,43 @@ class Graph {
   }
 }
 
-function fromMatrixToList(matrix) {
-  const adjacencyList = new Map();
-  for (let i = 0; i < matrix.length; i++) {
-    if (!adjacencyList.has(matrix[i][0]) && matrix[i][0] !== "#") {
-      adjacencyList.set(matrix[i][0], []);
-    }
-
-    for (let y = 0; y < matrix[i].length; y++) {
-      if (matrix[i][y] == 1) {
-        let myPoint = adjacencyList.get(matrix[i][0]);
-        myPoint.push(matrix[0][y]);
-      }
-    }
-  }
-  return adjacencyList;
-}
-
 module.exports = { Graph, Vertex };
 
-// | a b c d e
-// a| 0 1 0 0 1
-// b| 1 0 1 1 0
-// c| 0 1 0 1 0
-// d| 0 1 1 0 1
-// e| 1 0 0 1 0
+// function fromMatrixToList(matrix) {
+//   const adjacencyList = new Map();
+//   for (let i = 0; i < matrix.length; i++) {
+//     if (!adjacencyList.has(matrix[i][0]) && matrix[i][0] !== "#") {
+//       adjacencyList.set(matrix[i][0], []);
+//     }
 
-// Input
-let matrix = [
-  ["#", "a", "b", "c", "d", "e"],
-  ["a", 0, 1, 0, 0, 1],
-  ["b", 1, 0, 1, 1, 0],
-  ["c", 0, 1, 0, 1, 0],
-  ["d", 0, 1, 1, 0, 1],
-  ["e", 1, 0, 0, 1, 0],
-];
+//     for (let y = 0; y < matrix[i].length; y++) {
+//       if (matrix[i][y] == 1) {
+//         let myPoint = adjacencyList.get(matrix[i][0]);
+//         myPoint.push(matrix[0][y]);
+//       }
+//     }
+//   }
+//   return adjacencyList;
+// }
 
-console.log(fromMatrixToList(matrix));
+// // | a b c d e
+// // a| 0 1 0 0 1
+// // b| 1 0 1 1 0
+// // c| 0 1 0 1 0
+// // d| 0 1 1 0 1
+// // e| 1 0 0 1 0
+
+// // Input
+// let matrix = [
+//   ["#", "a", "b", "c", "d", "e"],
+//   ["a", 0, 1, 0, 0, 1],
+//   ["b", 1, 0, 1, 1, 0],
+//   ["c", 0, 1, 0, 1, 0],
+//   ["d", 0, 1, 1, 0, 1],
+//   ["e", 1, 0, 0, 1, 0],
+// ];
+
+// console.log(fromMatrixToList(matrix));
 // OutPut -->
 
 // Map {
